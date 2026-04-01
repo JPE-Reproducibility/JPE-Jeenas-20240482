@@ -1,0 +1,13 @@
+name: Test Environment
+
+on: workflow_dispatch
+
+jobs:
+  test:
+    runs-on: [self-hosted, macOS, ARM64]
+    steps:
+      - name: Check environment variables
+        run: |
+          echo "DROPBOX_BASE: $DROPBOX_BASE"
+          echo "JULIA_RUNNER_ENV: $JULIA_RUNNER_ENV"
+          env | grep -E "(DROPBOX|JULIA)"

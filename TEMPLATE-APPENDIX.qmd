@@ -1,0 +1,31 @@
+---
+title: JPE Replication Report
+subtitle: APPENDIX to report
+date: today
+number-sections: true
+format:
+  html: 
+    embed-resources: true
+---
+
+# Paper Identification
+
+|  |   |
+| ---  |  -------|
+| ID  |  {{< var paper_id >}} |
+| Author  |  {{< var author >}} |
+| Title  |  {{< var title >}} |
+| Iteration |  {{< var round >}} |
+
+# Report Appendix
+
+This is the appendix to the main report. It contains supplementary information which may be helpful for the replicator and/or the author. Please look carefully at the PII report at the bottom.
+
+
+{{< include generated/report-file-sizes.md >}}
+
+{{< include generated/report-hardcoded-numbers.md >}}
+
+{{< include generated/report-file-paths-detail.md >}}
+
+{{< include generated/report-pii-appendix.md >}}
