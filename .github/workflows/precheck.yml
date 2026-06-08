@@ -2,14 +2,15 @@ name: Run Precheck
 
 on:
   push:
-    paths:
-      - '_variables.yml'
-      - 'runner_precheck.jl'
+  workflow_dispatch:
 
 jobs:
   precheck:
     runs-on: [self-hosted, macOS, ARM64]
-    if: contains(github.event.head_commit.message, '[trigger remote]')
+    if: contains(github.event.head_commit.message, '[trigger remote]') || github.event_name == 'workflow_dispatch'
+
+    env:
+      DROPBOX_DOWNLOAD_URL: ${{ secrets.DROPBOX_DOWNLOAD_URL }}
     
     steps:
       - name: Checkout repository
@@ -39,12 +40,13 @@ jobs:
       
       - name: Read variables from YAML
         run: |
-          echo "=== Configuration ==="
-          while IFS=': ' read -r key value; do
-            clean_value=$(echo $value | tr -d '"')
-            echo "$key: $clean_value"
-            echo "$key=$clean_value" >> $GITHUB_ENV
-          done < _variables.yml
+          julia --project=$JULIA_RUNNER_ENV -e '
+            using YAML
+            vars = YAML.load_file("_variables.yml")
+            for (k,v) in vars
+              println("$k=$v")
+            end
+          ' >> $GITHUB_ENV
       
       - name: Run precheck script
         run: julia --project=$JULIA_RUNNER_ENV runner_precheck.jl
