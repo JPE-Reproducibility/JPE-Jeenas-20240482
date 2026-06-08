@@ -1,6 +1,11 @@
-title: "Stand-in title"
-author: "Dr Prof James 'JayJay' Author"
-paper_id: 12345678
+title: "Firm Balance Sheet Liquidity, Monetary Policy Shocks, and Investment Dynamics"
+author: "Jeenas"
 round: 1
-repo: "https://www.github.com/standin"
-dropbox_rel_path: "JPE/Author-12345678/1"
+repo: "https://github.com/JPE-Reproducibility/JPE-Jeenas-20240482"
+paper_id: 20240482
+journal: "JPE"
+paper_slug: "Jeenas-20240482"
+dropbox_rel_path: "JPE/Jeenas-20240482/1"
+package_size_gb: 2.1
+package_max_file_size_gb: 2
+package_max_pkg_size_gb: 10
