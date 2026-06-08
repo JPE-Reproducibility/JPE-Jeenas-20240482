@@ -9,3 +9,4 @@ dropbox_rel_path: "JPE/Jeenas-20240482/1"
 package_size_gb: 2.1
 package_max_file_size_gb: 2
 package_max_pkg_size_gb: 10
+test: true
