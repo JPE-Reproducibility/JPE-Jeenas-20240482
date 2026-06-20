@@ -15,84 +15,41 @@ format:
 | Title  |  {{< var title >}} |
 | Iteration |  {{< var round >}} |
 
-
-
-> {REPLICATOR} Every line which looks like this one, that is, it starts with {REPLICATOR} and has this formatting (there is a grey bar on the left 👀), is an **instruction for the replicator**. When you are done with editing this file, _there should be no such line left_ - you should delete all of them.
-
-> {REPLICATOR} Next to {REPLICATOR} for you, the replicator, there are instructions for the authors/data editor. Those are labelled either {REQUIRED} or {SUGGESTED}. You should delete those *only if specifically instructed*.
-
-> {REPLICATOR} Also compile document TEMPLATE-APPENDIX.qmd. It contains potentially useful information for you, like lists of suspicious files or other noteworthy content.
-
-> {REPLICATOR}: You should look at additional [Step by step guidance from Data Editor for Replicators](https://jpe-reproducibility.github.io/jpereplicators)
-
-::: {.callout-tip}
-
-# {Replicator}: Glossary (delete this before you submit your report!)
-
-_A brief explanation of important terms, before we start!_
-
-1. Dropbox: a location where authors upload their package and where the journal office uploads pdfs of paper and appendix. You download the package from there via the URL contained in your assignment email.
-2. `gh`: Github.com.
-3. Github Repository (_repo_): The location on `gh` where we store the _code_ of a given package (not the data!). It is also the location where you should file an issue tagging `@jpedataeditor` in the text, in case you encounter any problems or have questions. The github repo associated with this package was in your assignment email for this package. Let me print it here again for you (keep a browser tab open): [{{< var repo >}}]({{< var repo >}})
-4. `round`: the iteration number of this package. Notice that on the repo, each iteration has their own branch. Notice that you start on `round1`.
-5. manuscript/paper: The PDFs of accepted paper and appendices, which we want to verify. You should copy both paper and appendix into the root of this repo
-
-:::
-
-
 Some useful information up front:
 
 - [JPE Data and Code Availability Policy](https://www.journals.uchicago.edu/journals/jpe/datapolicy)
 - [Step by step guidance from Data Editor for Authors](https://jpedataeditor.github.io/) 
 - [Template README](https://social-science-data-editors.github.io/template_README/)
 
-
-
-> {REPLICATOR} the file you are looking at lives in a git repository on your computer. You should place the repository in a location on your computer where you have read and write access (I would not put it on any cloud storage to avoid issues). 
-
-
-> {REPLICATOR} you will edit _this_ file (`./TEMPLATE.qmd`). It is the source of your report. The package of the authors lives in folder `replication-package/`. We call the lowest level of this repo (marked by the dot `.` in `./TEMPLATE.qmd`) the _root of the repo_. Do not get confused if the authors talk about the _root of their package_, which would be location `./replication-package/` in this case.
-
-
-
 # Summary
-
-> {REPLICATOR} The Data Editor will fill this part out. It will be based on any {REQUIRED} and {SUGGESTED} action items that the report makes a note of.
-
 
 In assessing compliance with our [Data and Code Availability Policy](https://www.journals.uchicago.edu/journals/jpe/datapolicy), our reproducibility team has identified the following issues, which we ask you to address:
 
 # General
 
-
-> {REPLICATOR} Check off the following sections/elements that you find in either the README provided by the authors, or in the authors' online appendix (rare).
-
-- [ ] Data Availability and Provenance Statements
-  - [ ] Statement about Rights - Part 1: Right to use the data (e.g. *did the authors lawfully obtain the data*)
-  - [ ] Statement about Rights - Part 2: Right to publish the data (e.g. *are human subjects involved and did permission been granted to publish their data?*)
-  - [ ] License for Data (optional, but recommended)
-  - [ ] Details on each Data Source
-- [ ] Dataset list
-- [ ] Computational requirements
-  - [ ] Software Requirements
-  - [ ] Controlled Randomness (as necessary)
-  - [ ] Memory, Runtime, and Storage Requirements
-- [ ] Description of programs/code
-  - [ ] License for Code (Optional, but recommended) 
-- [ ] {REPLICATOR} to Replicators
-  - [ ] Details (as necessary)
-- [ ] List of tables and programs
-- [ ] References (Optional, but recommended) 
+- [X] Data Availability and Provenance Statements
+  - [X] Statement about Rights - Part 1: Right to use the data (e.g. *did the authors lawfully obtain the data*)
+  - [X] Statement about Rights - Part 2: Right to publish the data (e.g. *are human subjects involved and did permission been granted to publish their data?*)
+  - [X] License for Data (optional, but recommended)
+  - [X] Details on each Data Source
+- [X] Dataset list
+- [X] Computational requirements
+  - [X] Software Requirements
+  - [X] Controlled Randomness (as necessary)
+  - [X] Memory, Runtime, and Storage Requirements
+- [X] Description of programs/code
+  - [X] License for Code (Optional, but recommended) 
+  - [X] Details (as necessary)
+- [X] List of tables and programs
+- [X] References (Optional, but recommended) 
 
 
 # High-level Description of Research Project
 
-> {REPLICATOR} Tick all applicable boxes. You tick a box by placing an `x` between the square brackets (don't change anything else).
-
 *This research project...*
 
-- [ ] uses observational data.
-- [ ] uses *confidential* observational data.
+- [X] uses observational data.
+- [X] uses *confidential* observational data.
 - [ ] uses data generated via experiment or trial by the authors (in field or lab).
   - [ ] For lab experiments: The code to implement the experimental protocol (z-Tree, o-Tree etc) is included in the package.
   - [ ] A PDF copy of IRB approval is contained in the package.
@@ -108,8 +65,6 @@ In assessing compliance with our [Data and Code Availability Policy](https://www
 
 # Data description
 
-> {REPLICATOR} If the project has any confidential or restricted data, please leave the following statements here. If not, delete until next heading (`## Data Sources`).
-
 For any data that cannot be provided as part of the replication package, please provide the following information as part of the README.
 
 > {REQUIRED}  Please specify how long the data will be preserved in the restricted-access location.
@@ -124,89 +79,51 @@ For any data that cannot be provided as part of the replication package, please 
 
 ## Data Sources
 
-> {REPLICATOR} Identify all INPUT data sources, i.e. raw data files. Fill out the table below (regardless of whether the authors do provide a similar table in their readme). For each data source, list in THIS document presence or absence of source, codebook/information on the data, and summary statistics. Summary statistics and codebook may not be necessary if they are available for public use data. In all cases, if the author of the article points to an online location for such information, that is OK. Point out only a summary of shortcomings. For all data sources, check for a data citation. Oftentimes authors will cite the **paper** in which a dataset is originally used, but this is not a *data* citation. If you have found what you think to be a data citation, quote it in the report as shown below for the "Example data". When filling out the table, you should go through this mental list for each data source:
-> 
-> - [ ] Dataset is provided in public (dataverse) deposit (yes/no)
-> - [ ] Dataset is PRIVATELY provided (not for publication)
-> - [ ] DOI or URL is provided, and works: (PROVIDE URL OR DOI HERE)
-> - [ ] Access conditions are described:
->   - {REPLICATOR}: summarize the access conditions here.
-> - [ ] Data are not cited, but a working paper, article, or other document is cited > (not a data citation)
-> - [ ] Data are cited
->   - [ ] in the manuscript
->   - [ ] in the README
->
-> if anything needs adding, for a particular dataset, just add below the table. See Example.
-
-| file/name            | public | private | DOI/URL | Access described| cited readme | cited paper |
-| ----                 | ---    | ---     | ---     | ---             | ----         | ----        | 
-| data/raw/example.dta | yes    | no      | yes     | no              | yes          | yes         |
-| example2.dta         | yes    | no      | -       | no              | no           | yes         |
-| BLS                  | no     | no      | yes     | no              | yes          | yes          |
-
-### Example data: Bureau of Labor Statistics
-
-> {REPLICATOR}: **Example data: Bureau of Labor Statistics** In this example, data are not provided, a link is provided in the README, and that's about it. Here's how you would fill that out:
-
-- [ ] Dataset is provided in public deposit
-- [ ] Dataset is PRIVATELY provided (not for publication)
-- [x] DOI or URL is provided, and works: http://data.bls.gov/cgi-bin/surveymost?sm+08
-- [ ] Access conditions are described:
-  - No information on access conditions.
-- [ ] Data are not cited, but a working paper, article, or other document is cited (not a data citation)
-- [x] Data are cited
-  - [x] in the manuscript
-  - [x] in the README:
-
-> Bureau of Labor Statistics. 2000–2010. “Current Employment Statistics: Colorado, Total Nonfarm, Seasonally adjusted - SMS08000000000000001.” United States Department of Labor. http://data.bls.gov/cgi-bin/surveymost?sm+08 (accessed February 9, 2011).
-
-
-
+| file/name | public | private | DOI/URL | Access described | cited readme | cited paper |
+| ---- | --- | --- | --- | --- | ---- | ---- |
+| `data/raw/FEDFUNDS_Q.xls`; `data/raw/FEDFUNDS_Q.csv` (Federal funds rate, FRED/Federal Reserve) | Yes | No | [FRED Series FEDFUNDS](https://fred.stlouisfed.org/series/FEDFUNDS) | Yes (access date provided) | Yes | No |
+| `data/raw/DGS1.csv` (1-year Treasury constant maturity rate, FRED/Federal Reserve) | Yes | No | [FRED Series DGS1](https://fred.stlouisfed.org/series/DGS1) | Yes (access date provided) | Yes | No |
+| `data/raw/TB3MS.csv` (3-month Treasury bill rate, FRED/Federal Reserve) | Yes | No | [FRED Series TB3MS](https://fred.stlouisfed.org/series/TB3MS) | Yes (access date provided) | Yes | No |
+| `data/raw/GDPDEF_Q.csv` (GDP deflator, FRED/BEA) | Yes | No | [FRED Series GDPDEF](https://fred.stlouisfed.org/series/GDPDEF) | Yes (access date provided) | Yes | No |
+| `data/raw/GDPr_Q_BEA.xls`; `data/raw/GDPr_Q_BEA_Sheet0.csv`; `data/raw/GDPr_Q_BEA_Sheet1.csv` (BEA real GDP) | Yes | No | [BEA website](https://www.bea.gov/) | Yes (access date provided) | Yes | No |
+| `data/raw/GVADEF_Q_BEA.xls`; `data/raw/GVADEF_Q_BEA_Sheet0.csv`; `data/raw/GVADEF_Q_BEA_Sheet1.csv` (BEA GVA/value-added deflator) | Yes | No | [BEA website](https://www.bea.gov/) | Yes (access date provided) | Yes | No |
+| `data/raw/LPAgg_data/PCECC96.*`, `GPDIC1.*`, `GCEC1.*`, `DNDGRD3Q086SBEA.*`, `A006RD3Q086SBEA.*`, `A009RD3Q086SBEA.*`, `Y033RD3Q086SBEA.*` (aggregate consumption, investment, government spending, and deflators; FRED/BEA) | Yes | No | [FRED/BEA sources](https://doi.org/10.3886/E117644V1) | Yes (access date provided) | Yes | Luetticke (2021) article, but no data citation |
+| `data/raw/FRB_Z1.csv` (Federal Reserve Financial Accounts / Flow of Funds Z.1) | Yes | No | [Federal Reserve Z.1](https://www.federalreserve.gov/releases/z1/) | Yes (access date provided) | Yes | No |
+| `data/raw/bds2018.csv`; `data/raw/bds2018_fage.csv` (U.S. Census Bureau Business Dynamics Statistics, 2018 release) | Yes | No | [Census BDS data page](https://www.census.gov/programs-surveys/bds/data.html) | Yes (access date provided) | Yes | No |
+| `data/raw/JK_data_fig4.csv` (Jarocinski-Karadi monetary policy shocks) | Yes | No | [replication data DOI](https://doi.org/10.3886/E231538V1) | Yes (access date provided) | Yes | Jarocinski and Karadi (2020) article, but no data citation |
+| `data/raw/sffr_RR.csv` (Romer-Romer monetary policy shocks, robustness) | Yes | No | [Ramey replication zip](https://econweb.ucsd.edu/~vramey/research/Ramey_HOM_monetary.zip) | Yes (access date provided) | Yes | Romer and Romer (2004) and Ramey (2016), but no data citation |
+| `proprietary-data-not-for-publication/raw/CS_data_raw.csv` (Compustat North America Quarterly) | No | Yes | - | Yes (institutional access required) | Yes | No |
+| `proprietary-data-not-for-publication/raw/CRSP_data_raw.csv` (CRSP U.S. Stock Database) | No | Yes | - | Yes (institutional access required) | Yes | No |
+| `proprietary-data-not-for-publication/raw/CCM_data_raw.csv` (CRSP/Compustat Merged links) | No | Yes | - | Yes (institutional access required) | Yes | No |
+| `proprietary-data-not-for-publication/raw/Wscope_data_raw.xlsx` (Worldscope / Refinitiv Datastream incorporation and foundation dates) | No | Yes | - | Yes (institutional access required) | Yes | No |
 
 # Requirements 
 
-> {REPLICATOR}: Check that these requirements are met. 
-
-- [ ] README is in TXT, MD, or PDF format
-- [ ] README is accessible at the root of the package (not inside a folder)
+- [X] README is in TXT, MD, or PDF format
+- [X] README is accessible at the root of the package (not inside a folder)
 - [ ] Title conforms to guidance (starts with "Data and Code for: Title of Paper" or "Code for: Title of Paper", is properly capitalized)
-- [ ] Authors (with affiliations) are listed in the same order as on the paper
-
-> {REPLICATOR}: If any of the above are NOT checked, leave the related {REQUIRED} element here. Otherwise, delete the line.
-
-> {REQUIRED} Please ensure that a ASCII (txt), Markdown (md), or PDF version of the README are available in the data and code deposit.
+- [X] Authors (with affiliations) are listed in the same order as on the paper
 
 > {REQUIRED} Please review the title of the deposit as per our guidelines.
 
-> {REQUIRED} Please review authors and affiliations on the deposit. In general, they are the same, and in the same order, as for the manuscript; however, authors can deviate from that order.
-
-
 ## Stated Requirements
 
-> {REPLICATOR}: The authors may have specified specific requirements in terms of software, computer hardware, etc. Please list them here. This is **different** from the Computing Environment of the Replicator. You have the option to amend these with unstated requirements later. If all requirements are listed, check the box "Requirements are complete".
-
-- [ ] No requirements specified
-- [ ] Software Requirements specified as follows:
-  - Software 1
-  - Software 2
-- [ ] Computational Requirements specified as follows:
-  - Cluster size, etc.
-- [ ] Time Requirements specified as follows:
-  - Length of necessary computation (hours, weeks, etc.)
+- [X] Software Requirements specified as follows:
+  - macOS Sequoia 15.4.1 (24E263)
+  - Python 3.9.5
+  - R 4.1.0
+  - Julia 1.9.1
+  - MATLAB, version 9.12.0.1956245 (R2022a) Update 2
+- [X] Computational Requirements specified as follows:
+  - 3.2 GHz 6-Core Intel Core i7 processor
+  - 64 GB of RAM
+  - Approximately 120 GB of available storage
+- [X] Time Requirements specified as follows:
+  - about 22 hours
 
 - [ ] Requirements are complete.
 
-> {REPLICATOR}: If the requirements are NOT complete, please leave this line in. If unsure, leave this line in:
-
-For missing requirements, see the list of required changes in @sec-findings
-
-> {REPLICATOR}: If easier, simply copy-and-paste the authors' stated requirements here:
-
-
-
 # Analyzing Data and Code Files
-
-> {REPLICATOR} Here I provide you with a list of what I identified as *data files* based on file endings. Please check the list and amend if there are obvious mistakes. Watch out for Personally Identifiable Information (PII)!
 
 {{< include generated/report-pii.md >}}
 
@@ -219,246 +136,175 @@ For missing requirements, see the list of required changes in @sec-findings
 {{< include generated/report-large-files.md >}}
 
 
-
-
-> {REPLICATOR}: no need to commit a compiled version of `TEMPLATE-APPENDIX.qmd`. However, you should compile it and have a look at what is contained in that file!
-
-
-
 ## Code description
 
-> {REPLICATOR}: Review the code (but do not run it yet). Identify programs that create "analysis files" ("data preparation code"). Identify programs that create tables and figures. Not every deposit will have separate programs for this.
+The replication contains a Main Python script Master_main.py calling the main Python, Julia, R and Matlab pipelines in two sections, Empirics and Model. In addition to this, package provides language-specific scripts to install required dependencies.
 
-> {REPLICATOR}: Identify all **Figure, Table, and any in-text numbers**. Create a list, mapping each of them to a particular program and line number within the program (use [this template](package-output-map.xlsx)). Commit that list. You will come back to the list in your findings. IN THIS SECTION, point out only a summary description, including of shortcomings. E.g.
-
-> {REPLICATOR}: For example, you could write "There are four provided Stata do files, three Matlab .m files, including a "master.do"."
-> {REPLICATOR}: And you could list the issues you encounter:
-> {REPLICATOR}: - Table 5: could not identify code that produces Table 5
-> {REPLICATOR}: - Neither the program codes, nor the README, identify which tables are produced by what program.
 
 {{< include generated/report-cloc.md >}}
 
 
-- [ ] The replication package contains a "main" or "master" file(s) which calls all other auxiliary programs.
-
-> {REPLICATOR}: If the above checkbox for "main" file is NOT checked, leave the following SUGGESTION in the report!
-
-> {SUGGESTED} We strongly advise the use of a single (or a small number of) main control file(s) to automatically reproduce all figures and tables in the paper, without manual interaction.
-
-> NOTE: In-text numbers that reference numbers in tables do not need to be listed. Only in-text numbers that correspond to no table or figure need to be listed.
+- [X] The replication package contains a "main" or "master" file(s) which calls all other auxiliary programs.
 
 ## Computing Environment of the Replicator
 
-> {REPLICATOR}: You are now running the code!
+- Nuvolos Cloud, with standard configuration 16 cores and 64GB RAM, scaled up to 120 cores and 448GB of RAM to run model in Julia. Storage quota increased up to 150GB to accommodate model output. To ease comparisons with authors' setup, we report here also the list of dependencies used, which were installed following the README instructions.
 
-> {REPLICATOR}: This might be automated, for now, please fill in manually. Remove examples that are not relevant, adjust examples to fit special circumstances. Some of this is available from the standard log output in Stata or R. Some frequently used details are below. Some of these details can be found as follows:
->
-> - (Windows) by right-clicking on "This PC"
-> - (Mac) Apple-menu > "About this Mac"
-> - (Linux) see code in `tools/linux-system-info.sh`
->
-> Some options are listed below. Choose the one that applies.
-
-- Mac Laptop M2 MacBook Pro, MacOS 10.14.6, 8 GB of memory, (M2 Processor, 8 cores)
-- RedCloud Servers: Intel Xeon Processor (Skylake) 3.09 GHz (18 processors), Installed Ram 176 GB, 64-bit operating system, x64-based processor
-- CCSS Cloud: Windows Server AMD EPYC 7763 64-Core Processor 2.44 GHz, 128GB
-- BioHPC Linux server, Rocky Linux 9.0, AMD Opteron Processor 6380 / 16 cores/ 125 GB memory (adjust as necessary from output of linux-system-info.sh)
-- WholeTale (describe the environment chosen)
-- CodeOcean (describe the type of capsule chosen) Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz (16 cores), 128 GB Memory
-- Bitbucket Pipelines, "Ubuntu 20.04.2 LTS", Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz, 8 cores, 9GB memory
-- Codespaces, "Ubuntu 20.04.2 LTS", Intel(R) Xeon(R) Platinum 8272CL CPU @ 2.60GHz, 2 core, 8GB/ 4-core, 16GB/ 8-core, 32 GB/ 16-core, 64GB (choose appropriately)
-
-
-> {REPLICATOR}: Please also list the software you used (specific versions). List only the ones you used, add any not listed in the examples:
-
-- Stata/MP 18.0
+- Python 3.9.23 using
+  - pandas==1.3.1
+  - numpy==1.24.4
+  - scipy==1.8.1
+  - openpyxl==3.1.5
+  - xlrd==2.0.2
+  - pytz==2026.2
+  - python-dateutil==2.9.0post0
+- Julia 1.9.1
+  - AverageShiftedHistograms==0.8.9
+  - Binscatters==0.4.0
+  - CSV==0.10.14
+  - CompEcon==0.4.0
+  - DataFrames==1.5.0
+  - Distributions==0.25.45
+  - GLM==1.9.0
+  - Interpolations==0.15.1
+  - JLD==0.13.5
+  - LaTeXStrings==1.3.1
+  - Plots==1.40.8
+  - QuantEcon==0.16.6
+  - Roots==2.2.1
+- R 4.1.2
+  - plm==2.4-1
+  - plyr==1.8.6
+  - lmtest==0.9-38
+  - stargazer==5.2.2
+  - lfe==2.8-6
+  - moments==0.14
+  - xtable==1.8.4
+  - fixest==0.10.1
 - Matlab R2022a
-- Intel Compiler 3.14152 (note: there is no such thing, so please verify the version!)
+
+
 
 # Replication
 
-> {REPLICATOR}: provide details about your process of accessing the code and data.
-> 
-> - Do NOT detail things like "I save them on my Desktop".
-> - DO describe actions that you did as per {REPLICATOR} ("I added a config.do")
-> - DO describe any other actions you needed to do ("I had to make changes in multiple programs"), without going into TOO much detail.
-> 
-> BUT:
-> 
-> - DO provide ENOUGH detail so that an author, without access to the logs, can understand what needed to be fixed, including a copy-paste of the error message.
-> - DO commit to git before EACH new run with corrected code.
-> - DO (after all debugging is completed) a full run through the data, top-to-bottom, once all bugs are fixed, using the approriate method (command line or right-click).
-
-Example:
-
-- Downloaded code and data from dropbox.
-- Commited code to git repo.
-- Added the config.do generating system information.
-- Ran code as per README, but the third step did not work. (describe the problem HERE, and paste the full log in an issue on the github repo of this package - do not forget to add the tag @jpedataeditor whenever you open an issue!) 
-
-```R
-error: command distinct unknown
-```
-
-- Had to add undocumented package `distinct` to the install portion of the config file. Ran again.
-- Code failed because of a typo in the name of the file "`superdata.dta`" (was: `superdta.dta`). Fixed. Ran again.
-- Code ran to completion. 
-
-> {REPLICATOR}: You are done now with the actual replication task. We now move to writing your report.
+- Downloaded code and data from dropbox and cloned Git repo.
+- Instantiated Julia, Python and R dependencies following Readme. Our cloud machine makes it complex to run all within Python, as cross-application interaction is limited. Therefore, replicator proceeded running master script tasks separately by language, following the script's order.
+- Adjustment before running run_python(PROJECT_ROOT / "code" / "Python" / "FOFA_analysis_code.py") for missing dependencies pytz and dateutil. Installed via conda install pytz and conda install python-dateutil. Ran again. Authors might want to add these two package dependencies to their script and README.
+- Running "JPE_REPLICATION_FINAL/code/Julia/Julia_model_code/Master_model_work.jl" required more resources than described by README. We ran out of RAM memory with 64 and 128 GB on a Linux-based system. Also, storage needed to be increased above 120 GB. 
+- Ran the rest of the code successfully.
 
 # Findings {#sec-findings}
 
-> {REPLICATOR}: Describe your findings both positive and negative in some detail, for each **Data Preparation Code, Figure, Table, and any in-text numbers**. You can re-use the Excel file created under *Code Description*. When errors happen, be as precise as possible. For differences in figures, provide both a screenshot of what the manuscript contains, as well as the figure produced by the code you ran. For differences in numbers, provide both the number as reported in the manuscript, as well as the number replicated. If too many numbers, contact your supervisor.
->
-> Screenshots are best added to this `.qmd` file via the VScode extension [markdown paste](https://marketplace.visualstudio.com/items/?itemName=telesoho.vscode-markdown-paste-image). You need to find out how your OS can screenshot to the system clipboard (on my mac I have to do shift+control+cmd+4 instead of only the usual shift+cmd+4 to achieve this). Once you took the screen shot, you can use the markdown paste extension to literally *paste* the image into this qmd. It will create a filename with a timestamp. I set the preferences for the extension (in hidden folder `.vscode`) so that your screenshots go to the `images/` folder automatically. You want to commit that folder together with this file. Go into the command console of VScode and type "Markdown Paste" and memorize the shortcut (or just hit enter). You can modify the filename - no need. You end up with something like this:
-
-![DELETE THIS image FROM THE REPO before you commit](images/screenshot-20250627144043.png){width=80%}
-
-
-
-> If you can, add **textual output instead of screenshots**. I.e. if a script spits out an error, copy and paste the error into a code block (the thing delimited by three backticks ````` below), don't take a screen shot of your terminal. Here is an example (notice you should decorate the code block with the relevant language):
-
-```julia
-
-julia> using RES
-[ Info: Welcome to RES.jl
-[ Info: First tell us which journal you are handling in this session.
-❯❯❯ Which Journal are you working on? 
-  EJ, EctJ
-EJ
-[ Info: Setting up email
-[ Info: Running in production mode
-┌ Warning: not in test mode!
-└ @ RES ~/git/EJData/RES.jl/src/gsheets.jl:53
-Python error:
-PyError ($(Expr(:escape, :(ccall(#= /Users/floswald/.julia/packages/PyCall/1gn3u/src/pyfncall.jl:43 =# @pysym(:PyObject_Call), PyPtr, (PyPtr, PyPtr, PyPtr), o, pyargsptr, kw))))) <class 'google.auth.exceptions.RefreshError'>
-RefreshError('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
-  File "/Users/floswald/.julia/conda/3/aarch64/lib/python3.10/site-packages/google/oauth2/credentials.py", line 344, in refresh
-    ) = reauth.refresh_grant(
-  File "/Users/floswald/.julia/conda/3/aarch64/lib/python3.10/site-packages/google/oauth2/reauth.py", line 365, in refresh_grant
-    _client._handle_error_response(response_data, retryable_error)
-  File "/Users/floswald/.julia/conda/3/aarch64/lib/python3.10/site-packages/google/oauth2/_client.py", line 72, in _handle_error_response
-    raise exceptions.RefreshError(
-
-```
-
 ## Missing Requirements
 
-> {REPLICATOR}: If the replication package contains Stata programs run `tools/Stata_scan_code/scan_packages.do`, ensuring that you update the global `codedir` first. If the data is accessible, add any packages not mentioned in the README to the `config.do` and paste the excel output as a table below. If the data is restricted-access and not obtainable in a reasonable amount of time, paste the excel output as a table below.
-
-> {REPLICATOR}: If it turns out that some requirements were not stated/ are incomplete (software, packages, operating system), please list the *missing* list of requirements here. Remove lines that are not necessary. If the stated requirements are complete, delete this entire section, including the [REQUIRED] tag at the end.
-
-- [ ] Software Requirements 
-  - [ ] Stata
-    - [ ] Version
-    - Packages go here
-  - [ ] Matlab
-    - [ ] Version
-  - [ ] R
-    - [ ] Version
-    - R packages go here
-  - [ ] Python
-    - [ ] Version
-    - Python package go here
-  - [ ] REPLACE ME WITH OTHER
-- [ ] Computational Requirements specified as follows:
-  - Cluster size, disk size, memory size, etc.
-- [ ] Time Requirements 
-  - Length of necessary computation (hours, weeks, etc.)
+- [X] Software Requirements 
+  - [ ] Python packages
+    - pytz
+    - dateutil
 
 > [REQUIRED] Please amend README to contain complete requirements. 
 
-You can copy the section above, amended if necessary.
-
+Additionally, authors are invited to doublecheck RAM and storage requirements, as running "JPE_REPLICATION_FINAL/code/Julia/Julia_model_code/Master_model_work.jl" required more resources than described by README. We ran out of RAM memory with 64 and 128 GB on a Linux-based system. Also, allocated storage needed to be increased to 150 GB. 
 
 ## Data Preparation Code
 
-Examples:
-
-- Program `1-create-data.do` ran without error, output expected data
-- Program `2-create-appendix-data.do` failed to produce any output.
+Data Preparation Code ran without errors.
 
 ## Tables and Figures
 
-> {REPLICATOR}: Insert the filled-out `package-output-map.xlsx` here (complete the column `Reproduced?`), using the VS Code Plugins [Excel to Markdown table](https://marketplace.visualstudio.com/items?itemName=csholmq.excel-to-markdown-table). Then describe in more detail the issues that may have arisen.
+Replication detected several small discrepancies between replication output and in-paper figures, particularly for those derived by the model section. The output of the replication has been committed and pushed to the git repo associated with this report. Below a detailed summary of the findings:
 
-Examples:
-
-- Table 1: Looks the same
-- Table 2: (contains no data)
-- Table 3: Minor differences in row 5, column 3, 0.003 instead of 0.3
-
-> {REPLICATOR}: For tables, simple comparisons can be listed out as above. More complex differences can be described by using screenshots of the original table and the reproduced table, highlighting the differences.
+| Figure/Table #                           | Program                                                                                                                        | Line Number        | Reproduced    | Notes                                                                                                                                                                                  |
+|------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|--------------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Figure 1 (Fig1a, Fig1b)                  | code/R/Micro_reg_code.r                                                                                                        | 404, 415, 425      | Yes           |                                                                                                                                                                                        |
+| Figure 2 (Fig2a-Fig2c)                   | code/R/Micro_eventstudy_plottr.r                                                                                               | 68                 | Yes           |                                                                                                                                                                                        |
+| Figure 3 (Fig3a, Fig3b)                  | code/R/Micro_reg_code.r                                                                                                        | 1387               | Yes           |                                                                                                                                                                                        |
+| Figure 4 (Fig4a, Fig4b)                  | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 280, 431           | *No, different* | Linked generated Section 4.2 numbers differ from paper: saved 0.52->0.23 and 0.41->0.36; paper reports 0.53->0.24 and 0.43->0.39.                                                      |
+| Figure 5                                 | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 579                | Yes           |                                                                                                                                                                                        |
+| Figure 6                                 | code/Julia/Julia_model_code/auxiliary_model_functions.jl                                                                       | 2487               | *No, different* | Model line below the one in paper                                                                                                                                                      |
+| Figure 7 (Fig7a, Fig7b)                  | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 1104, 1127         | *No, different* | Panel b differs                                                                                                                                                                        |
+| Figure 8 (Fig8a, Fig8b)                  | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 1161, 1171         | *No, different* | Post-90 differs; Linked Section 5.2 auxiliary numbers differ: saved rm/rb peak ratio 0.26 pre and 0.47 post, GE-PE Q share 1.05; paper reports about 1/3 to 1/2 and about 2/3 Q share. |
+| Table 1                                  | code/R/Micro_reg_code.r                                                                                                        | 746                | Yes           |                                                                                                                                                                                        |
+| Table 2                                  | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 831                | *No, different* | Saved Table 2 model values differ from paper: pre model 13.65, -0.053, 0.769 vs paper 14.73, -0.049, 0.793; post -0.060, 0.931 vs paper -0.059, 0.953.                                 |
+| Figure A.1                               | code/R/Micro_reg_code.r                                                                                                        | 404                | Yes           |                                                                                                                                                                                        |
+| Table A.1                                | code/R/Micro_reg_code.r                                                                                                        | 1005               | Yes           |                                                                                                                                                                                        |
+| Table A.2                                | code/R/Micro_reg_code.r                                                                                                        | 517                | Yes           |                                                                                                                                                                                        |
+| Table A.3                                | code/R/Micro_reg_code.r                                                                                                        | 612                | Yes           |                                                                                                                                                                                        |
+| Table A.4                                | code/R/Micro_reg_code.r                                                                                                        | 679                | Yes           |                                                                                                                                                                                        |
+| Figure A.2 (FigA2a-FigA2c)               | code/R/Micro_eventstudy_plottr.r                                                                                               | 98                 | Yes           |                                                                                                                                                                                        |
+| Figure A.3 (FigA3a-FigA3c)               | code/R/Micro_eventstudy_plottr.r                                                                                               | 98                 | Yes           |                                                                                                                                                                                        |
+| Figure A.4 (FigA4a-FigA4c)               | code/R/Micro_eventstudy_plottr.r                                                                                               | 98                 | Yes           |                                                                                                                                                                                        |
+| Figure A.5 (FigA5a, FigA5b)              | code/R/Micro_reg_code.r                                                                                                        | 1387, 1922         | Yes           |                                                                                                                                                                                        |
+| Figure A.6 (FigA6a-FigA6d)               | code/R/Micro_reg_code.r                                                                                                        | 1387, 1922         | Yes           |                                                                                                                                                                                        |
+| Figure A.7 (FigA7a, FigA7b)              | code/R/Micro_reg_code.r                                                                                                        | 1387               | Yes           |                                                                                                                                                                                        |
+| Figure A.8 (FigA8a, FigA8b)              | code/R/Micro_reg_code.r                                                                                                        | 1387               | Yes           |                                                                                                                                                                                        |
+| Figure A.9 (FigA9a, FigA9b)              | code/R/Micro_reg_code.r                                                                                                        | 1387               | Yes           |                                                                                                                                                                                        |
+| Figure A.10 (FigA10a, FigA10b)           | code/R/Micro_reg_code.r                                                                                                        | 1405               | Yes           |                                                                                                                                                                                        |
+| Figure A.11 (FigA11a, FigA11b)           | code/R/Micro_reg_code.r                                                                                                        | 1387               | Yes           |                                                                                                                                                                                        |
+| Figure A.12 (FigA12a, FigA12b)           | code/R/Micro_reg_code.r                                                                                                        | 1387, 1756         | Yes           |                                                                                                                                                                                        |
+| Figure A.13 (FigA13a, FigA13b)           | code/R/Micro_reg_code.r                                                                                                        | 1756               | Yes           |                                                                                                                                                                                        |
+| Figure A.14 (FigA14a, FigA14b)           | code/R/Micro_reg_code.r                                                                                                        | 2212, 2237         | Yes           |                                                                                                                                                                                        |
+| Table A.5                                | code/Python/FOFA_analysis_code.py                                                                                              | 107                | Yes           |                                                                                                                                                                                        |
+| Figure A.15 (FigA15a-FigA15d)            | code/MATLAB/LPAgg_main.m                                                                                                       | 183, 205, 227, 250 | Yes           |                                                                                                                                                                                        |
+| Table B.1 (manual table from components) | code/Julia/Julia_empirics_code/BDS_analysis_code.jl; code/R/Micro_reg_code.r; code/Julia/Julia_model_code/Master_model_work.jl | 40; 218; 204       | *No, different* | Model calibration components differ: saved freq(D=1)=0.255 and E[n0]/E[n]=0.26; paper reports 0.252 and 0.25.                                                                          |
+| Table B.2                                | code/Python/Generate_TabB2.py                                                                                                  | 15, 60             | *No, different* | Model column differs in several untargeted moments, e.g. saved -0.231, 0.122, 0.046, 0.054, 0.017, 0.236, 0.273 vs paper -0.228, 0.125, 0.049, 0.061, 0.014, 0.221, 0.283.             |
+| Table B.3                                | code/R/Micro_model_reg_code.r                                                                                                  | 205                | *No, different* | Saved model regression table differs from paper in coefficients and observations, e.g. leverage first row 0.364/0.184/0.310 vs paper 0.351/0.169/0.292.                                |
+| Table B.4                                | code/R/Micro_model_reg_code.r                                                                                                  | 273                | *No, different* | Saved model R2 table differs from paper, e.g. leverage 0.73/0.08/0.53 vs paper 0.70/0.07/0.49; liquidity 0.80/0.71/0.57 vs paper 0.95/0.80/0.69.                                       |
+| Table B.5 (manual table from component)  | code/Julia/Julia_model_code/calib_functions.jl                                                                                 | 392                | *No, different* | Table component differs slightly: saved liquidity public-private difference 0.047; paper reports 0.048.                                                                                |
+| Figure B.1                               | code/Julia/Julia_model_code/calib_functions.jl                                                                                 | 338                | Yes           |                                                                                                                                                                                        |
+| Figure B.2                               | code/Julia/Julia_model_code/auxiliary_model_functions.jl                                                                       | 2514               | Yes           |                                                                                                                                                                                        |
+| Figure B.3 (FigB3a, FigB3b)              | code/Julia/Julia_model_code/auxiliary_model_functions.jl                                                                       | 2585, 2648         | *No, different* | Panel a differs slightly                                                                                                                                                               |
+| Figure B.4                               | code/Julia/Julia_model_code/auxiliary_model_functions.jl                                                                       | 2526               | *No, different* | Differs slightly                                                                                                                                                                       |
+| Figure B.5                               | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 1088               | *No, different* | Differs slightly                                                                                                                                                                       |
+| Figure B.6                               | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 690                | Yes           |                                                                                                                                                                                        |
+| Figure B.7                               | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 738                | Yes           |                                                                                                                                                                                        |
+| Figure B.8                               | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 1146               | Yes           |                                                                                                                                                                                        |
+| Figure B.9                               | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 1330               | *No, different* | Linked isolated liquid-asset-return-shock text differs: saved -0.43% pre and -0.57% post; paper reports -0.47% and -0.60%.                                                             |
+| Figure B.10                              | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 612                | Yes           |                                                                                                                                                                                        |
+| Figure B.11 (FigB11a, FigB11b)           | code/Julia/Julia_model_code/auxiliary_model_functions.jl; code/Julia/Julia_model_code/Master_model_work.jl                     | 2492; 1245         | Yes           |                                                                                                                                                                                        |
+| Figure B.12                              | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 1457               | Yes           |                                                                                                                                                                                        |
+| Figure B.13 (FigB13a, FigB13b)           | code/Julia/Julia_model_code/auxiliary_model_functions.jl; code/Julia/Julia_model_code/Master_model_work.jl                     | 2495; 1574         | *No, different* | Differs slightly                                                                                                                                                                       |
+| Figure B.14 (FigB14a, FigB14b)           | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 1474, 1590         | *No, different* | Linked Appendix B.11.2 decomposition text differs: saved Q share about 3/5 and rb+rm about 2/5; paper reports Q about 2/5 and rb+rm about 3/5.                                         |
  
-> {REPLICATOR}: Please provide a comparison with the paper when describing that figures look different. Use a screenshot for the paper, and the graph generated by the programs for the comparison. Reference the graph generated by the programs as a local file within the repository.
-
-Example:
-
-- Figure 1: Looks the same
-- Figure 2: no program provided
-- Figure 3: Paper version looks different from the one generated by programs:
-
-::: {#fig-three layout-ncol=2}
-
-![Paper version](images/heman.png)
-
-![Replicated version](images/skeletor.png)
-
-Figure 3 [DELETE THIS FIGURE]
-
-:::
-
 ## In-Text Numbers
 
-> {REPLICATOR}: list page and line number of in-text numbers. If ambiguous, cite the surrounding text, i.e., "the rate fell to 52% of all jobs: verified".
-
-- [ ] In-text numbers not verified.
+- [X] In-text numbers not verified.
 
 - [ ] There are no in-text numbers, or all in-text numbers stem from tables and figures.
 
 - [ ] There are in-text numbers, but they are not identified in the code
 
-- Page 21, line 5: Same
+Similarly to figures and tables, replicated in-text numbers linked to the model output slightly differ from those reported in the manuscript
 
-## Other Issues
-
-> {REPLICATOR}: List here any other issue that was not recalled previously. Delete the entire section if no additional issues were found. Don't forget to amend the examples provided. 
-
-
-Example:
-
-- Title of the Readme does not match title of the paper. 
-
-- One or multiple scripts include hard-coded numbers whose origin is unknown.
-
-- Readme recalls scripts that are not provided in the replication package. 
-
+| In-text numbers      | Program                                                             | Line Number      | Reproduced    | Notes                                                                                                                                                                    |
+|----------------------|---------------------------------------------------------------------|------------------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Footnote 3           | code/R/Micro_reg_code.r                                             | 258, 313         | Yes           |                                                                                                                                                                          |
+| Footnote 15          | code/R/Micro_reg_code.r                                             | 308              | Yes           |                                                                                                                                                                          |
+| Footnote 46          | code/Julia/Julia_model_code/Master_model_work.jl                    | 215              | Yes           |                                                                                                                                                                          |
+| Section 4.2 text     | code/Julia/Julia_model_code/Master_model_work.jl                    | 288              | *No, different* | Replicated 0.52->0.23 and 0.41->0.36; paper reports 0.53->0.24 and 0.43->0.39.                                                                                           |
+| Section 5.1 text     | code/Julia/Julia_model_code/Master_model_work.jl                    | 671              | *No, different* | Replicated aggregate debt-to-capital changes by -0.002, roughly -0.2pp; paper says only 0.1pp.                                                                           |
+| Section 5.2 text     | code/Julia/Julia_model_code/Master_model_work.jl                    | 1188, 1212, 1332 | *No, different* | Replicated rm/rb peak ratio 0.26 pre and 0.47 post vs about 1/3 to 1/2 in paper; GE-PE Q share 1.05 vs about 2/3 in paper; isolated rm shock -0.43/-0.57 vs -0.47/-0.60. |
+| Footnote 57          | code/Julia/Julia_model_code/Master_model_work.jl                    | 1220             | *No, different* | Replicated footnote value is 4.5% of net worth; paper footnote reports about 4.4%.                                                                                       |
+| Appendix A.2 text    | code/R/Micro_reg_code.r                                             | 520              | Yes           |                                                                                                                                                                          |
+| Footnote 61          | code/R/Micro_reg_code.r                                             | 791              | Yes           |                                                                                                                                                                          |
+| Footnote 74          | code/R/Micro_reg_code.r                                             | 327              | Yes           |                                                                                                                                                                          |
+| Appendix B.5.3 text  | code/Julia/Julia_model_code/Master_model_work.jl                    | 372              | *No, different* | Replicated mean b/k 0.294 and BA-BN 0.281, elasticities 0.144/-0.134; paper reports about 0.31, 0.296, and 0.204/-0.113.                                                 |
+| Footnote 87          | code/Julia/Julia_model_code/calib_functions.jl                      | 345              | Yes           |                                                                                                                                                                          |
+| Appendix B.10.1 text | code/Python/FOFA_analysis_code.py; code/Python/TB3_analysis_code.py | 111; 29          | Yes           |                                                                                                                                                                          |
+| Appendix B.11.1 text | code/Julia/Julia_model_code/Master_model_work.jl                    | 495              | Yes           |                                                                                                                                                                          |
+| Appendix B.11.2 text | code/Julia/Julia_model_code/Master_model_work.jl                    | 1616             | *No, different* | Replicated Q share about 3/5 and rb+rm about 2/5; paper reports Q about 2/5 and rb+rm about 3/5.                                                                         |
 
 # Classification
 
-> {REPLICATOR}: Make an assessment here.
->
-> Full reproduction can include a small number of apparently insignificant changes in the numbers in the table. Full reproduction also applies when changes to the programs needed to be made, but were successfully implemented.
->
-> Partial reproduction means that a significant number (>25%) of programs and/or numbers are different.
->
-> Note that if some data is confidential and not available, then a partial reproduction applies. This should be noted in the Reasons.
->
-> Note that when all data is confidential, it is unlikely that this exercise should have been attempted.
->
-> Failure to reproduce: only a small number of programs ran successfully, or only a small number of numbers were successfully generated (<25%). This also applies when all data is restricted-access and none of the **main** tables/figures are run.
-
 - [ ] full reproduction
-- [ ] full reproduction with minor issues
+- [X] full reproduction with minor issues
 - [ ] partial reproduction (see above)
 - [ ] not able to reproduce most or all of the results (reasons see above)
 
 ## Reason for incomplete reproducibility
 
-> {REPLICATOR}: mark the reasons here why full reproduciblity was not achieved, and enter this information in new issue on the github repo of this package. When results are fully reproduced, leave this section here, and mark "None".
-
 - [ ] None.
-- [ ] `Discrepancy in output` (either figures or numbers in tables or text differ)
+- [X] `Discrepancy in output` (either figures or numbers in tables or text differ)
 - [ ] `Bugs in code` that were fixable by the replicator (but should be fixed in the final deposit)
 - [ ] `Code missing`, in particular if it prevented the replicator from completing the reproducibility check
   - [ ] `Data preparation code missing` should be checked if the code missing seems to be data preparation code
@@ -468,27 +314,3 @@ Example:
 - [ ] `Data missing` is marked when data *should* be available, but was erroneously not provided, or is not accessible via the procedures described in the replication package
 - [ ] `Data not available` is marked when data requires additional access steps, for instance purchase or application procedure. 
 - [ ] `Missing README` is marked if there is no README to guide the replicator, or the README is not in compliance with JPE requirements
-
-
-
-> {REPLICATOR} You are done! Time to submit your report now!
->
-> You must commit everything you want the Data Editor to be able to see to this git repository and push to the github remote. In particular, commit all files needed to compile your report, as well as the pdf version of your compiled report. 
->
-> Your commit message should reflect the state of this package; i.e. which round, whether it's complete (or not), if not, brief issue description.
-
-> {REPLICATOR} Don't forget to delete all those REPLICATOR instructions before you commit the files!!!
-
-
-> {REPLICATOR} I leave this here 👇 as a reminder for you. Please delete those commands before you commit your report:
-
-```bash
-git add package-output-map.xlsx
-git add images # for your screenshots
-git add TEMPLATE.qmd  # your edits
-git add TEMPLATE.pdf  # the compiled version of your report
-git add TEMPLATE-APPENDIX.qmd  # if you made any edits
-git commit -m 'first round report. code breaks. missing citations.'
-# which round is this? fill in for which_round={round1, round2, ...}
-git push origin which_round
-```

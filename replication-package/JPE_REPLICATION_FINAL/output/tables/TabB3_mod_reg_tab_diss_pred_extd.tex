@@ -1,0 +1,45 @@
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Fri, Jun 19, 2026 - 10:46:16 AM
+% Requires LaTeX packages: dcolumn 
+\begin{table}[!htb] \centering 
+  \caption{Debt issuance prediction regression estimates, extended (Model)} 
+  \label{mod_tab_reg_debtforec} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{6}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-7} 
+\\[-1.8ex] & \multicolumn{2}{c}{$D_{i,t+1}$} & \multicolumn{2}{c}{$D_{i,t+4}$} & \multicolumn{2}{c}{$D_{i,t+8}$} \\ 
+\hline \\[-1.8ex] 
+ Leverage & 0.364^{***} & 0.184^{***} & 0.310^{***} & 0.249^{***} & 0.267^{***} & 0.181^{***} \\ 
+  & (0.011) & (0.015) & (0.007) & (0.011) & (0.008) & (0.013) \\ 
+  Liquidity & -0.417^{***} & -0.528^{***} & -0.352^{***} & -0.551^{***} & -0.275^{***} & -0.426^{***} \\ 
+  & (0.013) & (0.016) & (0.009) & (0.025) & (0.010) & (0.015) \\ 
+  $D_{i,t}$ & 0.032^{***} & -0.005 & 0.075^{***} & 0.039^{***} & 0.028^{***} & -0.010^{*} \\ 
+  & (0.003) & (0.004) & (0.002) & (0.004) & (0.002) & (0.005) \\ 
+  $\Delta_{3} \log(\text{Sales})$ & 0.174^{***} & 0.171^{***} & 0.111^{***} & 0.081^{***} & 0.059^{***} & 0.014^{***} \\ 
+  & (0.002) & (0.002) & (0.002) & (0.003) & (0.002) & (0.004) \\ 
+  log($k_{i,t}$) & 0.021^{***} & -0.018^{**} & -0.041^{***} & -0.226^{***} & -0.073^{***} & -0.313^{***} \\ 
+  & (0.004) & (0.007) & (0.003) & (0.019) & (0.003) & (0.013) \\ 
+  $\Delta_{3} \log(k)$ & 0.075^{***} & 0.082^{***} & 0.024^{***} & 0.072^{***} & 0.005 & 0.068^{***} \\ 
+  & (0.004) & (0.004) & (0.003) & (0.008) & (0.004) & (0.012) \\ 
+  Div/Assets & -1.055^{***} & -1.123^{***} & -0.424^{***} & -0.593^{***} & -0.196^{***} & -0.292^{***} \\ 
+  & (0.020) & (0.020) & (0.022) & (0.039) & (0.026) & (0.060) \\ 
+ \hline \\[-1.8ex] 
+Firm FE & \multicolumn{1}{c}{No} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{No} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{No} & \multicolumn{1}{c}{Yes} \\ 
+Observations & \multicolumn{1}{c}{645,875} & \multicolumn{1}{c}{645,875} & \multicolumn{1}{c}{588,723} & \multicolumn{1}{c}{588,723} & \multicolumn{1}{c}{512,608} & \multicolumn{1}{c}{512,608} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.200} & \multicolumn{1}{c}{0.248} & \multicolumn{1}{c}{0.092} & \multicolumn{1}{c}{0.187} & \multicolumn{1}{c}{0.032} & \multicolumn{1}{c}{0.198} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\end{tabular} 
+
+\vspace{4pt}
+\begin{minipage}{\textwidth}
+{\footnotesize \emph{Notes:} Estimates and standard errors (in parentheses) for coefficients in \eqref{eq_Empirics_debtforec_dynamicssec}. $^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01.
+Estimated on sample of 20,000 ``public'' firms, observed for 40 quarters, in model stationary distribution.
+Standard errors clustered two-way at firm and time levels.
+}
+\end{minipage}
+
+\end{table}

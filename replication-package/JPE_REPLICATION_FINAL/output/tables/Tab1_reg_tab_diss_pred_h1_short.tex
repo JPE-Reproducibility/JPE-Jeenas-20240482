@@ -1,0 +1,31 @@
+\begin{table}[!htbp]
+\caption{Debt issuance prediction regression estimates, $h=1$}
+\vspace{-14pt}
+\begin{center}
+\begin{tabular}{@{\extracolsep{1pt}} l *{6}{D{.}{.}{-1}}}
+\hline \hline
+Dep. var.: $D_{i,t+1}$ & \multicolumn{1}{c}{Tobin's $q$} & \multicolumn{1}{c}{Leverage} & \multicolumn{1}{c}{Liquidity} & \multicolumn{1}{c}{$\Delta_{3} \log(k)$} & \multicolumn{1}{c}{log(Size)} & \multicolumn{1}{c}{$D_{i,t}$} \\
+\hline
+No firm FE & 0.001 & 0.152 & -0.376 & 0.055 & 0.004 & 0.333 \\
+ & (0.001) & (0.009) & (0.012) & (0.005) & (0.003) & (0.006) \\
+\hspace{8pt} Marg.\ $R^{2}$ (pp) & 0.00 & 0.40 & 1.24 & 0.09 & 0.00 & 8.30 \\
+\hline
+With firm FE & 0.002 & 0.035 & -0.386 & 0.054 & -0.003 & 0.182 \\
+ & (0.001) & (0.011) & (0.014) & (0.005) & (0.004) & (0.005) \\
+\hspace{8pt} Marg.\ $R^{2}$ (pp) & 0.00 & 0.01 & 0.58 & 0.07 & 0.00 & 2.02 \\
+\hline
+& \multicolumn{6}{c}{Observations: 160,550, \quad $R^{2}$: 0.312 and 0.394 } \\
+\hline \hline
+\end{tabular}
+\label{tab_reg_debtforec_longshort}
+
+\vspace{4pt}
+\begin{minipage}{\textwidth}
+{\footnotesize \emph{Notes:} Estimates and standard errors (in parentheses) for selected coefficients in \eqref{eq_Empirics_debtforec_dynamicssec}.
+Standard errors clustered two-way at firm and SIC 3-digit industry-time levels.
+Marginal $R^{2}$ computed based on the difference of full model $R^{2}$ and the $R^{2}$ in a restricted model which drops the corresponding control.
+}
+\end{minipage}
+\end{center}
+\vspace{-10pt}
+\end{table}
