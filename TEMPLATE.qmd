@@ -212,7 +212,7 @@ Data Preparation Code ran without errors.
 
 ## Tables and Figures
 
-Replication detected several small discrepancies between replication output and in-paper figures, particularly for those derived by the model section. The output of the replication has been committed and pushed to the git repo associated with this report. Below a detailed summary of the findings:
+Replication detected several small discrepancies between replication output and in-paper figures, particularly for those derived by the model section. The output of the replication has been committed and pushed to the git repo associated with this report. Below a detailed summary of the findings, followed by two exemplifying comparisons for Figure 7 and Table 2:
 
 | Figure/Table #                           | Program                                                                                                                        | Line Number        | Reproduced    | Notes                                                                                                                                                                                  |
 |------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|--------------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -265,7 +265,24 @@ Replication detected several small discrepancies between replication output and 
 | Figure B.12                              | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 1457               | Yes           |                                                                                                                                                                                        |
 | Figure B.13 (FigB13a, FigB13b)           | code/Julia/Julia_model_code/auxiliary_model_functions.jl; code/Julia/Julia_model_code/Master_model_work.jl                     | 2495; 1574         | *No, different* | Differs slightly                                                                                                                                                                       |
 | Figure B.14 (FigB14a, FigB14b)           | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 1474, 1590         | *No, different* | Linked Appendix B.11.2 decomposition text differs: saved Q share about 3/5 and rb+rm about 2/5; paper reports Q about 2/5 and rb+rm about 3/5.                                         |
- 
+::: {#fig-fig7b layout-ncol="2"}
+
+![Panel B from paper](images/fig7b_paper.png){#fig-fig7b-paper}
+
+![Replicated Panel B](images/fig7b_rep.png){#fig-fig7b-rep}
+
+Fig. 7, Panel B: original paper figure and replication.
+
+:::
+
+
+
+![Table 2 from paper](images/tab2_paper.png)
+
+![Replicated Table 2](images/tab2_rep.png)
+
+
+
 ## In-Text Numbers
 
 - [X] In-text numbers not verified.
