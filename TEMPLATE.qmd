@@ -212,116 +212,101 @@ Data Preparation Code ran without errors.
 
 ## Tables and Figures
 
-Replication detected several small discrepancies between replication output and in-paper figures, particularly for those derived by the model section. The output of the replication has been committed and pushed to the git repo associated with this report. Below a detailed summary of the findings, followed by two exemplifying comparisons for Figure 7 and Table 2:
+Replication successfully generated all tables and figures in the paper. All replicated output matched latest draft of the paper.
 
-| Figure/Table #                           | Program                                                                                                                        | Line Number        | Reproduced    | Notes                                                                                                                                                                                  |
-|------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|--------------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Figure 1 (Fig1a, Fig1b)                  | code/R/Micro_reg_code.r                                                                                                        | 404, 415, 425      | Yes           |                                                                                                                                                                                        |
-| Figure 2 (Fig2a-Fig2c)                   | code/R/Micro_eventstudy_plottr.r                                                                                               | 68                 | Yes           |                                                                                                                                                                                        |
-| Figure 3 (Fig3a, Fig3b)                  | code/R/Micro_reg_code.r                                                                                                        | 1387               | Yes           |                                                                                                                                                                                        |
-| Figure 4 (Fig4a, Fig4b)                  | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 280, 431           | *No, different* | Linked generated Section 4.2 numbers differ from paper: saved 0.52->0.23 and 0.41->0.36; paper reports 0.53->0.24 and 0.43->0.39.                                                      |
-| Figure 5                                 | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 579                | Yes           |                                                                                                                                                                                        |
-| Figure 6                                 | code/Julia/Julia_model_code/auxiliary_model_functions.jl                                                                       | 2487               | *No, different* | Model line below the one in paper                                                                                                                                                      |
-| Figure 7 (Fig7a, Fig7b)                  | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 1104, 1127         | *No, different* | Panel b differs                                                                                                                                                                        |
-| Figure 8 (Fig8a, Fig8b)                  | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 1161, 1171         | *No, different* | Post-90 differs; Linked Section 5.2 auxiliary numbers differ: saved rm/rb peak ratio 0.26 pre and 0.47 post, GE-PE Q share 1.05; paper reports about 1/3 to 1/2 and about 2/3 Q share. |
-| Table 1                                  | code/R/Micro_reg_code.r                                                                                                        | 746                | Yes           |                                                                                                                                                                                        |
-| Table 2                                  | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 831                | *No, different* | Saved Table 2 model values differ from paper: pre model 13.65, -0.053, 0.769 vs paper 14.73, -0.049, 0.793; post -0.060, 0.931 vs paper -0.059, 0.953.                                 |
-| Figure A.1                               | code/R/Micro_reg_code.r                                                                                                        | 404                | Yes           |                                                                                                                                                                                        |
-| Table A.1                                | code/R/Micro_reg_code.r                                                                                                        | 1005               | Yes           |                                                                                                                                                                                        |
-| Table A.2                                | code/R/Micro_reg_code.r                                                                                                        | 517                | Yes           |                                                                                                                                                                                        |
-| Table A.3                                | code/R/Micro_reg_code.r                                                                                                        | 612                | Yes           |                                                                                                                                                                                        |
-| Table A.4                                | code/R/Micro_reg_code.r                                                                                                        | 679                | Yes           |                                                                                                                                                                                        |
-| Figure A.2 (FigA2a-FigA2c)               | code/R/Micro_eventstudy_plottr.r                                                                                               | 98                 | Yes           |                                                                                                                                                                                        |
-| Figure A.3 (FigA3a-FigA3c)               | code/R/Micro_eventstudy_plottr.r                                                                                               | 98                 | Yes           |                                                                                                                                                                                        |
-| Figure A.4 (FigA4a-FigA4c)               | code/R/Micro_eventstudy_plottr.r                                                                                               | 98                 | Yes           |                                                                                                                                                                                        |
-| Figure A.5 (FigA5a, FigA5b)              | code/R/Micro_reg_code.r                                                                                                        | 1387, 1922         | Yes           |                                                                                                                                                                                        |
-| Figure A.6 (FigA6a-FigA6d)               | code/R/Micro_reg_code.r                                                                                                        | 1387, 1922         | Yes           |                                                                                                                                                                                        |
-| Figure A.7 (FigA7a, FigA7b)              | code/R/Micro_reg_code.r                                                                                                        | 1387               | Yes           |                                                                                                                                                                                        |
-| Figure A.8 (FigA8a, FigA8b)              | code/R/Micro_reg_code.r                                                                                                        | 1387               | Yes           |                                                                                                                                                                                        |
-| Figure A.9 (FigA9a, FigA9b)              | code/R/Micro_reg_code.r                                                                                                        | 1387               | Yes           |                                                                                                                                                                                        |
-| Figure A.10 (FigA10a, FigA10b)           | code/R/Micro_reg_code.r                                                                                                        | 1405               | Yes           |                                                                                                                                                                                        |
-| Figure A.11 (FigA11a, FigA11b)           | code/R/Micro_reg_code.r                                                                                                        | 1387               | Yes           |                                                                                                                                                                                        |
-| Figure A.12 (FigA12a, FigA12b)           | code/R/Micro_reg_code.r                                                                                                        | 1387, 1756         | Yes           |                                                                                                                                                                                        |
-| Figure A.13 (FigA13a, FigA13b)           | code/R/Micro_reg_code.r                                                                                                        | 1756               | Yes           |                                                                                                                                                                                        |
-| Figure A.14 (FigA14a, FigA14b)           | code/R/Micro_reg_code.r                                                                                                        | 2212, 2237         | Yes           |                                                                                                                                                                                        |
-| Table A.5                                | code/Python/FOFA_analysis_code.py                                                                                              | 107                | Yes           |                                                                                                                                                                                        |
-| Figure A.15 (FigA15a-FigA15d)            | code/MATLAB/LPAgg_main.m                                                                                                       | 183, 205, 227, 250 | Yes           |                                                                                                                                                                                        |
-| Table B.1 (manual table from components) | code/Julia/Julia_empirics_code/BDS_analysis_code.jl; code/R/Micro_reg_code.r; code/Julia/Julia_model_code/Master_model_work.jl | 40; 218; 204       | *No, different* | Model calibration components differ: saved freq(D=1)=0.255 and E[n0]/E[n]=0.26; paper reports 0.252 and 0.25.                                                                          |
-| Table B.2                                | code/Python/Generate_TabB2.py                                                                                                  | 15, 60             | *No, different* | Model column differs in several untargeted moments, e.g. saved -0.231, 0.122, 0.046, 0.054, 0.017, 0.236, 0.273 vs paper -0.228, 0.125, 0.049, 0.061, 0.014, 0.221, 0.283.             |
-| Table B.3                                | code/R/Micro_model_reg_code.r                                                                                                  | 205                | *No, different* | Saved model regression table differs from paper in coefficients and observations, e.g. leverage first row 0.364/0.184/0.310 vs paper 0.351/0.169/0.292.                                |
-| Table B.4                                | code/R/Micro_model_reg_code.r                                                                                                  | 273                | *No, different* | Saved model R2 table differs from paper, e.g. leverage 0.73/0.08/0.53 vs paper 0.70/0.07/0.49; liquidity 0.80/0.71/0.57 vs paper 0.95/0.80/0.69.                                       |
-| Table B.5 (manual table from component)  | code/Julia/Julia_model_code/calib_functions.jl                                                                                 | 392                | *No, different* | Table component differs slightly: saved liquidity public-private difference 0.047; paper reports 0.048.                                                                                |
-| Figure B.1                               | code/Julia/Julia_model_code/calib_functions.jl                                                                                 | 338                | Yes           |                                                                                                                                                                                        |
-| Figure B.2                               | code/Julia/Julia_model_code/auxiliary_model_functions.jl                                                                       | 2514               | Yes           |                                                                                                                                                                                        |
-| Figure B.3 (FigB3a, FigB3b)              | code/Julia/Julia_model_code/auxiliary_model_functions.jl                                                                       | 2585, 2648         | *No, different* | Panel a differs slightly                                                                                                                                                               |
-| Figure B.4                               | code/Julia/Julia_model_code/auxiliary_model_functions.jl                                                                       | 2526               | *No, different* | Differs slightly                                                                                                                                                                       |
-| Figure B.5                               | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 1088               | *No, different* | Differs slightly                                                                                                                                                                       |
-| Figure B.6                               | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 690                | Yes           |                                                                                                                                                                                        |
-| Figure B.7                               | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 738                | Yes           |                                                                                                                                                                                        |
-| Figure B.8                               | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 1146               | Yes           |                                                                                                                                                                                        |
-| Figure B.9                               | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 1330               | *No, different* | Linked isolated liquid-asset-return-shock text differs: saved -0.43% pre and -0.57% post; paper reports -0.47% and -0.60%.                                                             |
-| Figure B.10                              | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 612                | Yes           |                                                                                                                                                                                        |
-| Figure B.11 (FigB11a, FigB11b)           | code/Julia/Julia_model_code/auxiliary_model_functions.jl; code/Julia/Julia_model_code/Master_model_work.jl                     | 2492; 1245         | Yes           |                                                                                                                                                                                        |
-| Figure B.12                              | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 1457               | Yes           |                                                                                                                                                                                        |
-| Figure B.13 (FigB13a, FigB13b)           | code/Julia/Julia_model_code/auxiliary_model_functions.jl; code/Julia/Julia_model_code/Master_model_work.jl                     | 2495; 1574         | *No, different* | Differs slightly                                                                                                                                                                       |
-| Figure B.14 (FigB14a, FigB14b)           | code/Julia/Julia_model_code/Master_model_work.jl                                                                               | 1474, 1590         | *No, different* | Linked Appendix B.11.2 decomposition text differs: saved Q share about 3/5 and rb+rm about 2/5; paper reports Q about 2/5 and rb+rm about 3/5.                                         |
-::: {#fig-fig7b layout-ncol="2"}
-
-![Panel B from paper](images/fig7b_paper.png){#fig-fig7b-paper}
-
-![Replicated Panel B](images/fig7b_rep.png){#fig-fig7b-rep}
-
-Fig. 7, Panel B: original paper figure and replication.
-
-:::
-
-
-
-![Table 2 from paper](images/tab2_paper.png)
-
-![Replicated Table 2](images/tab2_rep.png)
-
-
+| Figure/Table # | Program | Line Number | Reproduced |
+| --- | --- | --- | --- |
+| Figure 1 (Fig1a, Fig1b) | code/R/Micro_reg_code.r | 404, 415, 425 | Yes |
+| Figure 2 (Fig2a-Fig2c) | code/R/Micro_eventstudy_plottr.r | 68 | Yes |
+| Figure 3 (Fig3a, Fig3b) | code/R/Micro_reg_code.r | 1387 | Yes |
+| Figure 4 (Fig4a, Fig4b) | code/Julia/Julia_model_code/Master_model_work.jl | 280, 431 | Yes |
+| Figure 5 | code/Julia/Julia_model_code/Master_model_work.jl | 579 | Yes |
+| Figure 6 | code/Julia/Julia_model_code/auxiliary_model_functions.jl | 2487 | Yes |
+| Figure 7 (Fig7a, Fig7b) | code/Julia/Julia_model_code/Master_model_work.jl | 1104, 1127 | Yes |
+| Figure 8 (Fig8a, Fig8b) | code/Julia/Julia_model_code/Master_model_work.jl | 1161, 1171 | Yes |
+| Table 1 | code/R/Micro_reg_code.r | 746 | Yes |
+| Table 2 | code/Julia/Julia_model_code/Master_model_work.jl | 831 | Yes |
+| Figure A.1 | code/R/Micro_reg_code.r | 404 | Yes |
+| Table A.1 | code/R/Micro_reg_code.r | 1005 | Yes |
+| Table A.2 | code/R/Micro_reg_code.r | 517 | Yes |
+| Table A.3 | code/R/Micro_reg_code.r | 612 | Yes |
+| Table A.4 | code/R/Micro_reg_code.r | 679 | Yes |
+| Figure A.2 (FigA2a-FigA2c) | code/R/Micro_eventstudy_plottr.r | 98 | Yes |
+| Figure A.3 (FigA3a-FigA3c) | code/R/Micro_eventstudy_plottr.r | 98 | Yes |
+| Figure A.4 (FigA4a-FigA4c) | code/R/Micro_eventstudy_plottr.r | 98 | Yes |
+| Figure A.5 (FigA5a, FigA5b) | code/R/Micro_reg_code.r | 1387, 1922 | Yes |
+| Figure A.6 (FigA6a-FigA6d) | code/R/Micro_reg_code.r | 1387, 1922 | Yes |
+| Figure A.7 (FigA7a, FigA7b) | code/R/Micro_reg_code.r | 1387 | Yes |
+| Figure A.8 (FigA8a, FigA8b) | code/R/Micro_reg_code.r | 1387 | Yes |
+| Figure A.9 (FigA9a, FigA9b) | code/R/Micro_reg_code.r | 1387 | Yes |
+| Figure A.10 (FigA10a, FigA10b) | code/R/Micro_reg_code.r | 1405 | Yes |
+| Figure A.11 (FigA11a, FigA11b) | code/R/Micro_reg_code.r | 1387 | Yes |
+| Figure A.12 (FigA12a, FigA12b) | code/R/Micro_reg_code.r | 1387, 1756 | Yes |
+| Figure A.13 (FigA13a, FigA13b) | code/R/Micro_reg_code.r | 1756 | Yes |
+| Figure A.14 (FigA14a, FigA14b) | code/R/Micro_reg_code.r | 2212, 2237 | Yes |
+| Table A.5 | code/Python/FOFA_analysis_code.py | 107 | Yes |
+| Figure A.15 (FigA15a-FigA15d) | code/MATLAB/LPAgg_main.m | 183, 205, 227, 250 | Yes |
+| Table B.1 (manual table from components) | code/Julia/Julia_empirics_code/BDS_analysis_code.jl; code/R/Micro_reg_code.r; code/Julia/Julia_model_code/Master_model_work.jl | 40; 218; 204 | Yes |
+| Table B.2 | code/Python/Generate_TabB2.py | 15, 60 | Yes |
+| Table B.3 | code/R/Micro_model_reg_code.r | 205 | Yes |
+| Table B.4 | code/R/Micro_model_reg_code.r | 273 | Yes |
+| Table B.5 (manual table from component) | code/Julia/Julia_model_code/calib_functions.jl | 392 | Yes |
+| Figure B.1 | code/Julia/Julia_model_code/calib_functions.jl | 338 | Yes |
+| Figure B.2 | code/Julia/Julia_model_code/auxiliary_model_functions.jl | 2514 | Yes |
+| Figure B.3 (FigB3a, FigB3b) | code/Julia/Julia_model_code/auxiliary_model_functions.jl | 2585, 2648 | Yes |
+| Figure B.4 | code/Julia/Julia_model_code/auxiliary_model_functions.jl | 2526 | Yes |
+| Figure B.5 | code/Julia/Julia_model_code/Master_model_work.jl | 1088 | Yes |
+| Figure B.6 | code/Julia/Julia_model_code/Master_model_work.jl | 690 | Yes |
+| Figure B.7 | code/Julia/Julia_model_code/Master_model_work.jl | 738 | Yes |
+| Figure B.8 | code/Julia/Julia_model_code/Master_model_work.jl | 1146 | Yes |
+| Figure B.9 | code/Julia/Julia_model_code/Master_model_work.jl | 1330 | Yes |
+| Figure B.10 | code/Julia/Julia_model_code/Master_model_work.jl | 612 | Yes |
+| Figure B.11 (FigB11a, FigB11b) | code/Julia/Julia_model_code/auxiliary_model_functions.jl; code/Julia/Julia_model_code/Master_model_work.jl | 2492; 1245 | Yes |
+| Figure B.12 | code/Julia/Julia_model_code/Master_model_work.jl | 1457 | Yes |
+| Figure B.13 (FigB13a, FigB13b) | code/Julia/Julia_model_code/auxiliary_model_functions.jl; code/Julia/Julia_model_code/Master_model_work.jl | 2495; 1574 | Yes |
+| Figure B.14 (FigB14a, FigB14b) | code/Julia/Julia_model_code/Master_model_work.jl | 1474, 1590 | Yes |
 
 ## In-Text Numbers
 
-- [X] In-text numbers not verified.
+- [ ] In-text numbers not verified.
 
 - [ ] There are no in-text numbers, or all in-text numbers stem from tables and figures.
 
 - [ ] There are in-text numbers, but they are not identified in the code
 
-Similarly to figures and tables, replicated in-text numbers linked to the model output slightly differ from those reported in the manuscript
+- [X] There are in-text numbers, and the identified in-text numbers were verified against the auxiliary output files.
 
-| In-text numbers      | Program                                                             | Line Number      | Reproduced    | Notes                                                                                                                                                                    |
-|----------------------|---------------------------------------------------------------------|------------------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Footnote 3           | code/R/Micro_reg_code.r                                             | 258, 313         | Yes           |                                                                                                                                                                          |
-| Footnote 15          | code/R/Micro_reg_code.r                                             | 308              | Yes           |                                                                                                                                                                          |
-| Footnote 46          | code/Julia/Julia_model_code/Master_model_work.jl                    | 215              | Yes           |                                                                                                                                                                          |
-| Section 4.2 text     | code/Julia/Julia_model_code/Master_model_work.jl                    | 288              | *No, different* | Replicated 0.52->0.23 and 0.41->0.36; paper reports 0.53->0.24 and 0.43->0.39.                                                                                           |
-| Section 5.1 text     | code/Julia/Julia_model_code/Master_model_work.jl                    | 671              | *No, different* | Replicated aggregate debt-to-capital changes by -0.002, roughly -0.2pp; paper says only 0.1pp.                                                                           |
-| Section 5.2 text     | code/Julia/Julia_model_code/Master_model_work.jl                    | 1188, 1212, 1332 | *No, different* | Replicated rm/rb peak ratio 0.26 pre and 0.47 post vs about 1/3 to 1/2 in paper; GE-PE Q share 1.05 vs about 2/3 in paper; isolated rm shock -0.43/-0.57 vs -0.47/-0.60. |
-| Footnote 57          | code/Julia/Julia_model_code/Master_model_work.jl                    | 1220             | *No, different* | Replicated footnote value is 4.5% of net worth; paper footnote reports about 4.4%.                                                                                       |
-| Appendix A.2 text    | code/R/Micro_reg_code.r                                             | 520              | Yes           |                                                                                                                                                                          |
-| Footnote 61          | code/R/Micro_reg_code.r                                             | 791              | Yes           |                                                                                                                                                                          |
-| Footnote 74          | code/R/Micro_reg_code.r                                             | 327              | Yes           |                                                                                                                                                                          |
-| Appendix B.5.3 text  | code/Julia/Julia_model_code/Master_model_work.jl                    | 372              | *No, different* | Replicated mean b/k 0.294 and BA-BN 0.281, elasticities 0.144/-0.134; paper reports about 0.31, 0.296, and 0.204/-0.113.                                                 |
-| Footnote 87          | code/Julia/Julia_model_code/calib_functions.jl                      | 345              | Yes           |                                                                                                                                                                          |
-| Appendix B.10.1 text | code/Python/FOFA_analysis_code.py; code/Python/TB3_analysis_code.py | 111; 29          | Yes           |                                                                                                                                                                          |
-| Appendix B.11.1 text | code/Julia/Julia_model_code/Master_model_work.jl                    | 495              | Yes           |                                                                                                                                                                          |
-| Appendix B.11.2 text | code/Julia/Julia_model_code/Master_model_work.jl                    | 1616             | *No, different* | Replicated Q share about 3/5 and rb+rm about 2/5; paper reports Q about 2/5 and rb+rm about 3/5.                                                                         |
+All in-text numbers detected were reproduced by the replication package. Replicated in-text numbers match the ones reported in the paper. 
+
+| In-text numbers | Program | Line Number | Reproduced |
+| --- | --- | --- | --- |
+| Footnote 3 | code/R/Micro_reg_code.r | 258, 313 | Yes |
+| Footnote 15 | code/R/Micro_reg_code.r | 308 | Yes |
+| Footnote 46 | code/Julia/Julia_model_code/Master_model_work.jl | 215 | Yes |
+| Section 4.2 text | code/Julia/Julia_model_code/Master_model_work.jl | 288 | Yes |
+| Section 5.1 text | code/Julia/Julia_model_code/Master_model_work.jl | 671 | Yes |
+| Section 5.2 text | code/Julia/Julia_model_code/Master_model_work.jl | 1188, 1212, 1332 | Yes |
+| Footnote 57 | code/Julia/Julia_model_code/Master_model_work.jl | 1220 | Yes |
+| Appendix A.2 text | code/R/Micro_reg_code.r | 520 | Yes |
+| Footnote 61 | code/R/Micro_reg_code.r | 791 | Yes |
+| Footnote 74 | code/R/Micro_reg_code.r | 327 | Yes |
+| Appendix B.5.3 text | code/Julia/Julia_model_code/Master_model_work.jl | 372 | Yes |
+| Footnote 87 | code/Julia/Julia_model_code/calib_functions.jl | 345 | Yes |
+| Appendix B.10.1 text | code/Python/FOFA_analysis_code.py; code/Python/TB3_analysis_code.py | 111; 29 | Yes |
+| Appendix B.11.1 text | code/Julia/Julia_model_code/Master_model_work.jl | 495 | Yes |
+| Appendix B.11.2 text | code/Julia/Julia_model_code/Master_model_work.jl | 1616 | Yes |
 
 # Classification
 
-- [ ] full reproduction
-- [X] full reproduction with minor issues
+- [X] full reproduction
+- [ ] full reproduction with minor issues
 - [ ] partial reproduction (see above)
 - [ ] not able to reproduce most or all of the results (reasons see above)
 
 ## Reason for incomplete reproducibility
 
-- [ ] None.
-- [X] `Discrepancy in output` (either figures or numbers in tables or text differ)
+- [X] None.
+- [ ] `Discrepancy in output` (either figures or numbers in tables or text differ)
 - [ ] `Bugs in code` that were fixable by the replicator (but should be fixed in the final deposit)
 - [ ] `Code missing`, in particular if it prevented the replicator from completing the reproducibility check
   - [ ] `Data preparation code missing` should be checked if the code missing seems to be data preparation code
